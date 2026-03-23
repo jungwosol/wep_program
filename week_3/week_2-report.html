@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학생 생활 만족도 조사</title>
+</head>
+<body>
+    <form action="survey.php" method="POST">
+        <h1>대학생 생활 환경 및 만족도 조사</h1>
+
+        <fieldset>
+            <legend>기본정보</legend>
+            
+             
+                    <label for="cust-name">이름</label><br>
+                    <input type="text" id="name" name="name" placeholder="이름 입력" required autofocus><br><br>
+               
+                    <label for="cust-email">이메일</label><br>
+                    <input type="email" id="email" name="email" placeholder="이메일 입력" required><br><br>
+             
+                    <label for="cust-age">나이</label><br>
+                    <input type="number" id="age" name="age" min="18" max="100" required><br><br>
+              
+                    <label for="date">입학 연도</label><br>
+                    <input type="date" id="date" name="date" required><br>
+           
+        </fieldset>
+
+        <fieldset>
+            <legend>대학 생활 만족도</legend>
+
+            <p>전반적인 대학 생활 만족도</p>
+        
+                    <label><input type = "radio" name="satisfaction" value="5"> 매우 만족</label><br>
+                    <label><input type = "radio" name="satisfaction" value="4"> 만족</label><br>
+                    <label><input type = "radio" name="satisfaction" value="3"> 보통</label><br>
+                    <label><input type = "radio" name="satisfaction" value="2"> 불만족</label><br>
+                    <label><input type = "radio" name="satisfaction" value="1"> 매우 불만족</label><br><br>
+                
+                
+                    <label for="study">학습 환경 만족도 (0~10)</label><br>
+                    <input type ="range" id="study" name = "study" min="0" max="10" max="10"><br><br>
+
+               
+                    <label for="major"> 전공 선택</label><br>
+                    <select id="major" name="major">
+                        <option value="">전공 선택</option>
+                        <option>소프트웨어학부</option>
+                        <option>간호학과</option> 
+                        <option>항공운항</option>
+                        <option>항공기계</option>
+                        <option>항공서비스</option> 
+                    </select>       
+                
+        <fieldset>
+        <legend>추가 의견 </legend>    
+
+        <p>대학 생활에서 중요하다고 생각하는 요소는 (복수 선택 가능)</p>
+
+        <label><input type="checkbox" name="factor" value="facility"> 시설</label><br>
+        <label><input type="checkbox" name="factor" value="lecture"> 강의 질</label><br>
+        <label><input type="checkbox" name="factor" value="friend"> 인간 관계</label><br>
+        <label><input type="checkbox" name="factor" value="job"> 취업 지원</label><br><br>
+
+        <label for="comments">개선되었으면 하는 점:</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="40" placeholder = "자유롭게 작성해주세요"></textarea><br><br>
+
+        </fieldset>
+        
+    <br>
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화" style="margin-left:20px; color:red">
+
+ 
+    </form>
+</body>
+</html>
